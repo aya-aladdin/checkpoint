@@ -1,52 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Checkpoint Hackathon</title>
-  <!-- Link to Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkpoint</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlalDLuLwYc+B6/Xv+xQ2vL/j7b1A1v5TzJ8lKzF5W8w7y2rTzB6zR0L/sXq+i2sP7Gf1y6tY9z2h0f7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <nav class="fixed-navbar">
+    <ul class="nav-list">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about-event-section" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#sponsor-us-section" class="nav-link">Sponsor Us</a></li>
+        <li class="nav-item"><a href="#contact-us-section" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 
-  <header>
-    <nav class="navbar">
-      <div>
-        <strong>
-          <a href="{{url_for('home')}}">
-            <i class="fas fa-terminal"></i> Checkpoint
-          </a>
-        </strong>
-      </div>
-      <div>
-        <a href="{{ url_for('home') }}">
-          <i class="fas fa-home"></i> Home
-        </a>
-        <a href="{{ url_for('contact') }}">
-          <i class="fas fa-envelope"></i> Contact
-        </a>
-        <a href="{{ url_for('sponsor') }}">
-          <i class="fas fa-handshake"></i> Sponsor
-        </a>
-      </div>
-    </nav>
-  </header>
+  <div class="header-div">
+    <div class="main-content-block">
+        <h1>Join us at CheckPoint!</h1>
+        <h1 id="typewriter-text"></h1>
+        <p>
+            Get ready for an electrifying event filled with innovation, collaboration, and challenges.
+            Connect with like-minded individuals, expand your skills, and build amazing projects.
+            Whether you're a seasoned pro or just starting, CheckPoint offers an unforgettable experience!
+        </p>
+        <div class="button-container">
+            <button class="action-button">Register Now</button>
+            <button class="action-button secondary"><i class="fab fa-discord"></i> Join our Discord</button>
+        </div>
+    </div>
+  </div>
 
-  <main>
-    <section id="home">
-      <h1><i class="fas fa-code"></i> Welcome to Checkpoint Hackathon <i class="fas fa-laptop-code"></i></h1>
-      <p>
-        Checkpoint is a hackathon for builders, creators, and changemakers.
-        Whether you're a beginner or a seasoned coder, this is your space to create something amazing.
-      </p>
-      
-    </section>
-  </main>
-  
-  <footer>
-    <i class="fas fa-copyright"></i> 2025 Checkpoint Hackathon. All rights reserved.
-  </footer>
+  <section id="about-event-section" class="about-event-section">
+    <h2>What is CheckPoint?</h2>
+    <p>CheckPoint is an annual hackathon designed to bring together students, developers, and tech enthusiasts from around the globe. It's a 48-hour event where participants collaborate to build innovative solutions, learn new technologies, and network with mentors and industry professionals. Our goal is to foster creativity, problem-solving, and a passion for technology in a fun and challenging environment.</p>
+
+    <h3>When is CheckPoint?</h3>
+    <p>Mark your calendars! CheckPoint will take place from <strong>August 29th to August 31st, 2024</strong>. Get ready for an intense weekend of coding and creation!</p>
+
+    <div class="faq-container">
+        <details>
+            <summary>Who can attend CheckPoint?</summary>
+            <div class="faq-content">
+                <p>CheckPoint is open to all university students, regardless of their major or skill level. Whether you're a seasoned coder, a budding designer, or just curious about technology, you're welcome to join! We encourage participants from diverse backgrounds to foster a rich and collaborative environment.</p>
+            </div>
+        </details>
+        <details>
+            <summary>What should I bring?</summary>
+            <div class="faq-content">
+                <p>Bring your laptop, charger, and any essential tech accessories you might need. Most importantly, bring your enthusiasm and a willingness to learn!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Is there a cost to participate?</summary>
+            <div class="faq-content">
+                <p>No, CheckPoint is absolutely FREE for all accepted participants! We believe in making technology accessible to everyone. Food, drinks, and swag will be provided throughout the event, thanks to our generous sponsors.</p>
+            </div>
+        </details>
+        <details>
+            <summary>Do I need a team?</summary>
+            <div class="faq-content">
+                <p>You can register as an individual or as a team of up to 3 members. If you don't have a team, don't worry! We'll have dedicated team-building sessions at the beginning of the event to help you connect with other participants and form a winning team.</p>
+            </div>
+        </details>
+        <details>
+            <summary>What kind of projects can I build?</summary>
+            <div class="faq-content">
+                <p> You can build anything you can imagine! Projects can range from web and mobile applications to hardware hacks, AI/ML models, and more. We encourage innovative solutions that address real-world problems. Challenges and themes will be announced at the opening ceremony to inspire your creativity.</p>
+            </div>
+        </details>
+    </div>
+  </section>
+
+  <section id="sponsor-us-section" class="content-section">
+    <div class="sponsor-con">
+      <h2>Sponsor CheckPoint</h2>
+      <p>Partner with CheckPoint and help us empower the next generation of innovators! Your sponsorship directly contributes to providing a high-quality experience for participants, including food, prizes, and resources. By sponsoring, you gain unparalleled exposure to a talented and motivated audience.</p>
+    </div>
+    
+    <h3>Why Sponsor Us?</h3>
+    <div class="faq-container">
+        <details>
+            <summary>Brand Visibility & Exposure</summary>
+            <div class="faq-content">
+                <p>Increase your brand's presence among a tech-savvy audience. Your logo will be prominently displayed on our website, social media, event banners, and merchandise, reaching hundreds of students and professionals.</p>
+            </div>
+        </details>
+        <details>
+            <summary>Talent Acquisition</summary>
+            <div class="faq-content">
+                <p>Connect directly with top-tier talent for internships, co-op placements, and full-time positions. Recruiters can interact with participants, conduct on-site interviews, and assess skills in a dynamic environment.</p>
+            </div>
+        </details>
+        <details>
+            <summary>Networking Opportunities</summary>
+            <div class="faq-content">
+                <p>Engage with other industry leaders, mentors, and academic faculty. Build valuable connections that can lead to future collaborations and partnerships.</p>
+            </div>
+        </details>
+        <details>
+            <summary>Community Engagement & CSR</summary>
+            <div class="faq-content">
+                <p>Demonstrate your commitment to supporting innovation, education, and the tech community. Contribute to the development of future technology leaders and make a positive social impact.</p>
+            </div>
+        </details>
+        <details>
+            <summary>Customizable Packages</summary>
+            <div class="faq-content">
+                <p>We offer various sponsorship tiers with flexible benefits to meet your marketing and recruitment goals. From workshop hosting to judging panels, we can tailor a package that provides maximum value for your organization.</p>
+            </div>
+        </details>
+    </div>
+    <p style="margin-top: 40px; max-width: 800px;">Ready to make an impact? Download our sponsorship package for more details on tiers and benefits, or contact us directly to discuss a custom partnership!</p>
+    <div class="button-container">
+        <button class="action-button">Download Sponsorship Package</button>
+    </div>
+  </section>
+
+  <section id="contact-us-section" class="contact-section">
+    <div class="contact-info">
+      <h2>Get in Touch!</h2>
+      <p>Have questions, suggestions, or just want to say hello? Reach out to us using the form on the side, or connect through our social channels!</p>
+      <div class="social-links">
+          <a href="#" style="color: var(--accent-blue);"><i class="fab fa-twitter"></i></a>
+          <a href="#" style="color: var(--accent-pink);"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="color: var(--accent-green);"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="contact-form-container">
+        <form class="contact-form">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+    </div>
+  </section>
 
 </body>
+ <script src="{{ url_for('static', filename='script.js') }}"></script>
 </html>
