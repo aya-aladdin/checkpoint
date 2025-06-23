@@ -4,32 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Checkpoint Hackathon</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <!-- Link to Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
   <header>
     <nav class="navbar">
-      <div><strong>Checkpoint</strong></div>
       <div>
-        <a href="{{ url_for('home') }}">Home</a>
-        <a href="{{ url_for('contact') }}">Contact</a>
-        <a href="{{ url_for('sponsor') }}">Sponsor</a>
+        <strong>
+          <a href="{{url_for('home')}}">
+            <i class="fas fa-terminal"></i> Checkpoint
+          </a>
+        </strong>
+      </div>
+      <div>
+        <a href="{{ url_for('home') }}">
+          <i class="fas fa-home"></i> Home
+        </a>
+        <a href="{{ url_for('contact') }}">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
+        <a href="{{ url_for('sponsor') }}">
+          <i class="fas fa-handshake"></i> Sponsor
+        </a>
       </div>
     </nav>
   </header>
 
   <main>
     <section id="home">
-      <h1>Welcome to Checkpoint Hackathon</h1>
+      <h1><i class="fas fa-code"></i> Welcome to Checkpoint Hackathon <i class="fas fa-laptop-code"></i></h1>
       <p>
         Checkpoint is a hackathon for builders, creators, and changemakers.
         Whether you're a beginner or a seasoned coder, this is your space to create something amazing.
       </p>
       
     </section>
+  </main>
+  
   <footer>
-    &copy; 2025 Checkpoint Hackathon. All rights reserved.
+    <i class="fas fa-copyright"></i> 2025 Checkpoint Hackathon. All rights reserved.
   </footer>
 
 </body>

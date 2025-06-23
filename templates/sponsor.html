@@ -5,19 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sponsor Us</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <nav class="navbar">
-            <div><strong>Checkpoint</strong></div>
-            <div>
-                <a href="{{ url_for('home') }}">Home</a>
-                <a href="{{ url_for('contact') }}">Contact</a>
-                <a href="{{ url_for('sponsor') }}">Sponsor</a>
-            </div>
-        </nav>
-    </header>
+    <nav class="navbar">
+      <div>
+        <strong>
+          <a href="{{url_for('home')}}">
+            <i class="fas fa-terminal"></i> Checkpoint
+          </a>
+        </strong>
+      </div>
+      <div>
+        <a href="{{ url_for('home') }}">
+          <i class="fas fa-home"></i> Home
+        </a>
+        <a href="{{ url_for('contact') }}">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
+        <a href="{{ url_for('sponsor') }}">
+          <i class="fas fa-handshake"></i> Sponsor
+        </a>
+      </div>
+    </nav>
+  </header>
 
     <main>
         <section>
