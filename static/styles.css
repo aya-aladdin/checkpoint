@@ -991,17 +991,18 @@ html, body {
     margin: 40px auto;
     padding: 0 20px;
     box-sizing: border-box;
-    display: grid;
+    display: grid; /* Default for mobile (single column) */
     grid-template-columns: 1fr;
     gap: 20px;
+    grid-auto-rows: min-content;
 }
 
 .faq-column {
-    flex: 1;
+    flex: 1; /* This will be overridden for desktop by the flex-basis/width below */
     display: flex;
     flex-direction: column;
     gap: 20px;
-    min-width: 350px;
+    min-width: 350px; /* Base min-width for columns */
 }
 
 details {
@@ -1023,7 +1024,7 @@ details[open] {
 
 summary {
     display: block;
-    padding: 20px 60px 20px 25px; /* Increased right padding further to prevent overlap */
+    padding: 20px 65px 20px 25px;
     font-weight: 700;
     cursor: pointer;
     outline: none;
@@ -1049,7 +1050,7 @@ summary::-webkit-details-marker {
 summary::after {
     content: '+';
     position: absolute;
-    right: 25px; /* Adjusted position to maintain clear space */
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.5em;
@@ -1086,13 +1087,24 @@ details[open] summary::after {
 
 @media (min-width: 769px) {
     .faq-container {
-        grid-template-columns: repeat(2, 1fr);
-        align-items: start; /* Added to prevent items from stretching vertically */
+        display: flex; /* Switched to flexbox for independent column heights */
+        flex-direction: row; /* Arrange columns horizontally */
+        flex-wrap: wrap; /* Allow columns to wrap if screen gets too small (though handled by column width) */
+        align-items: flex-start; /* Crucial: Prevents columns from stretching to equal height */
+        justify-content: center; /* Centers the columns horizontally */
+        /* gap property still works with modern flexbox, so it handles the spacing */
+    }
+
+    .faq-column {
+        flex: 0 0 calc(50% - 10px); /* Flex-basis for two columns, accounting for 20px gap */
+        max-width: calc(50% - 10px); /* Ensures it doesn't grow beyond 50% */
+        min-width: unset; /* Remove the general min-width restriction to allow flex-basis to work */
     }
 }
 
 @media (max-width: 768px) {
     .faq-container {
+        /* This media query ensures it reverts to grid for mobile if needed, though default is already grid */
         padding: 0 15px;
     }
 
