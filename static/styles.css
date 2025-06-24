@@ -8,8 +8,12 @@
   --accent-lightblue: #63a1f0;
   --accent-brightblue: #308ff3;
 
+  --accent-purple-rgb: 106, 35, 229;
+  --accent-blue-rgb: 110, 135, 232;
   --accent-pink-rgb: 209, 41, 200;
+  --accent-green-rgb: 43, 232, 198;
   --accent-lightblue-rgb: 99, 161, 240;
+  --accent-brightblue-rgb: 48, 143, 243;
 
   --dark-background: #1a1a1a;
   --text-light: #f0f0f0;
@@ -35,7 +39,6 @@ html, body {
   width: 100%;
   z-index: 1000;
   background: linear-gradient(to right, var(--accent-brightblue), var(--accent-purple));
-  box-shadow: none;
   transition: background 0.5s ease;
 }
 
@@ -261,7 +264,6 @@ html, body {
   pointer-events: none;
 }
 
-
 .about-event-section h2 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 3.5em;
@@ -322,95 +324,6 @@ html, body {
   margin: 0 auto;
 }
 
-.faq-container {
-  max-width: 1000px;
-  margin: 60px auto 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-  padding: 0 20px;
-  z-index: 1;
-}
-
-.faq-container details {
-  margin-bottom: 0;
-  border: 1px solid rgba(var(--accent-lightblue-rgb), 0.3);
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  background-color: rgba(var(--accent-lightblue-rgb), 0.15);
-  overflow: hidden;
-  backdrop-filter: blur(5px);
-  color: var(--text-light);
-}
-
-.faq-container summary {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.5em;
-  font-weight: 600;
-  padding: 20px;
-  cursor: pointer;
-  outline: none;
-  background-color: rgba(var(--accent-lightblue-rgb), 0.2);
-  color: var(--accent-green);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 12px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  letter-spacing: 1px;
-}
-
-.faq-container summary:hover {
-  background-color: rgba(var(--accent-brightblue-rgb), 0.3);
-  color: white;
-}
-
-.faq-container summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq-container summary::after {
-  content: '\2B';
-  font-size: 1.8em;
-  font-weight: bold;
-  transition: transform 0.5s ease;
-  margin-left: 10px;
-  color: var(--accent-pink);
-}
-
-.faq-container details[open] summary::after {
-  content: '\2212';
-  transform: rotate(180deg);
-  color: var(--accent-pink);
-}
-
-.faq-container details[open] summary {
-  background-color: rgba(var(--accent-brightblue-rgb), 0.25);
-  color: white;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.faq-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 1.0s ease-in-out, padding 1.0s ease-in-out;
-  padding: 0 20px;
-  background-color: rgba(var(--accent-lightblue-rgb), 0.1);
-  color: var(--text-light);
-}
-
-.faq-container details[open] .faq-content {
-  max-height: 1000px;
-  padding: 15px 20px 20px 20px;
-}
-
-.faq-container details p {
-  font-size: 1em;
-  line-height: 1.6;
-  color: var(--text-light);
-  margin: 0;
-}
 
 .content-section {
   background-color: var(--dark-background);
@@ -664,6 +577,11 @@ html, body {
     .about-event-section h3, .content-section h3 {
         font-size: 1.8em;
     }
+
+    .about-event-section p {
+        font-size: 1em;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -731,21 +649,6 @@ html, body {
 
   .about-event-section p {
     font-size: 1em;
-  }
-
-  .faq-container {
-    margin-top: 40px;
-    padding: 0 10px;
-    grid-template-columns: 1fr;
-  }
-
-  .faq-container summary {
-    font-size: 1.2em;
-    padding: 15px;
-  }
-
-  .faq-container details p {
-    padding: 10px 15px;
   }
 
   .contact-section {
@@ -880,20 +783,6 @@ html, body {
     font-size: 0.9em;
   }
 
-  .faq-container {
-    margin-top: 30px;
-    padding: 0 5px;
-  }
-
-  .faq-container summary {
-    font-size: 1.1em;
-    padding: 12px;
-  }
-
-  .faq-container details p {
-    padding: 8px 12px;
-  }
-
   .content-section {
     padding: 40px 15px;
   }
@@ -965,17 +854,6 @@ html, body {
     padding: 8px 15px;
     font-size: 0.85em;
   }
-}
-
-.about-content-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  max-width: 1200px;
-  width: 100%;
-  margin-bottom: 60px;
 }
 
 .calendar-container {
@@ -1101,36 +979,167 @@ html, body {
     border: none;
 }
 
-@media (max-width: 992px) {
-    .about-content-wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .about-left {
-        padding-left: 20px;
-        align-items: center;
-        text-align: center;
-    }
-
-    .about-left p {
-        margin: 0 auto;
-    }
-
-    .calendar-container {
-        width: 80%;
-        max-width: 350px;
-    }
-
-    .about-event-section h2, .content-section h2, .contact-info h2 {
-        font-size: 2.8em;
-    }
-
-    .about-event-section h3, .content-section h3 {
-        font-size: 1.8em;
-    }
-}
 .content-section .button-container {
   justify-content: center;
+}
+
+/* start of faq!! */
+
+.faq-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.faq-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 350px;
+}
+
+details {
+    background-color: rgba(var(--accent-blue-rgb), 0.1);
+    border: 1px solid rgba(var(--accent-blue-rgb), 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0;
+}
+
+details[open] {
+    background-color: rgba(var(--accent-purple-rgb), 0.15);
+    border-color: var(--accent-purple);
+    box-shadow: 0 6px 15px rgba(var(--accent-purple-rgb), 0.3);
+}
+
+summary {
+    display: block;
+    padding: 20px 60px 20px 25px; /* Increased right padding further to prevent overlap */
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    color: var(--text-light);
+    font-size: 1.15em;
+    position: relative;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: rgba(var(--accent-blue-rgb), 0.05);
+}
+
+summary:hover {
+    background-color: rgba(var(--accent-blue-rgb), 0.15);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: '+';
+    position: absolute;
+    right: 25px; /* Adjusted position to maintain clear space */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: var(--accent-green);
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+    content: '-';
+    transform: translateY(-50%) rotate(0deg);
+    color: var(--accent-pink);
+}
+
+.faq-content {
+    padding: 15px 25px 20px 25px;
+    border-top: 1px solid rgba(var(--accent-purple-rgb), 0.2);
+    color: var(--text-light);
+    font-size: 1em;
+    line-height: 1.7;
+    animation: fadein 0.4s ease-out;
+}
+
+.faq-content p {
+    margin: 0;
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+}
+
+@keyframes fadein {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 769px) {
+    .faq-container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start; /* Added to prevent items from stretching vertically */
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 0 15px;
+    }
+
+    .faq-column {
+        flex: none;
+        width: 100%;
+        min-width: unset;
+        margin-bottom: 20px;
+    }
+
+    .faq-column:last-child {
+        margin-bottom: 0;
+    }
+
+    summary {
+        padding: 15px 20px;
+        font-size: 1.05em;
+    }
+
+    summary::after {
+        right: 20px;
+        font-size: 1.3em;
+    }
+
+    .faq-content {
+        padding: 10px 20px 15px 20px;
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-container {
+        padding: 0 10px;
+    }
+
+    summary {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+
+    summary::after {
+        right: 15px;
+        font-size: 1.2em;
+    }
+
+    .faq-content {
+        padding: 8px 15px 12px 15px;
+        font-size: 0.9em;
+    }
 }

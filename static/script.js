@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevMonthBtn = document.getElementById('prevMonth');
     const nextMonthBtn = document.getElementById('nextMonth');
 
-    let currentYear = 2024;
-    let currentMonth = 7;
+    let currentYear = 2025;
+    let currentMonth = 8;
 
     const checkpointDates = {
-        month: 7,
-        year: 2024,
-        startDay: 29,
-        endDay: 31
+        month: 8,
+        year: 2025,
+        startDay: 5,
+        endDay: 7
     };
 
     function renderCalendar() {
@@ -109,4 +109,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     typeWriter();
+
+    const faqDetails = document.querySelectorAll('.faq-container details');
+
+    faqDetails.forEach(detail => {
+        const summary = detail.querySelector('summary');
+        const content = detail.querySelector('.faq-content');
+
+        summary.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            if (detail.hasAttribute('open')) {
+                detail.removeAttribute('open');
+            } else {
+                detail.setAttribute('open', '');
+            }
+        });
+    });
 });
