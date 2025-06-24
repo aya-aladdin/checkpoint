@@ -29,8 +29,13 @@
         </p>
         <div class="button-container">
             <button class="action-button">Register Now</button>
-            <button class="action-button secondary"><i class="fab fa-discord"></i> Join our Discord</button>
+            <a href="https://discord.gg/4ZjKrG8Q" target="_blank" rel="noopener noreferrer" class="no-underline">
+                <button class="action-button secondary"><i class="fab fa-discord"></i> Join our Discord</button>
+            </a>
         </div>
+        <a href="https://flask-bank.vercel.app/login" target="_blank" rel="noopener noreferrer" class="no-underline">
+            <button class="bank-button"><i class="fas fa-wallet"></i> Make a wallet at the HackStreet Bank</button>
+        </a>
     </div>
     <div class="header-image-container">
        <img src="{{ url_for('static', filename='Group_1.png') }}">
@@ -150,29 +155,17 @@
     </div>
   </section>
 
-  <section id="contact-us-section" class="contact-section">
+<section id="contact-us-section" class="contact-section">
     <div class="contact-info">
       <h2>Get in Touch!</h2>
       <p>Have questions, suggestions, or just want to say hello? Reach out to us using the form on the side, or connect through our social channels!</p>
       <div class="social-links">
-          <a href="#" style="color: var(--accent-blue);"><i class="fab fa-twitter"></i></a>
-          <a href="#" style="color: var(--accent-pink);"><i class="fab fa-instagram"></i></a>
-          <a href="#" style="color: var(--accent-green);"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/hackstreet.ae/?hl=en" style="color: var(--accent-pink);"><i class="fab fa-instagram"></i></a>
+          @hackstreet.ae
       </div>
     </div>
-    <div class="contact-form-container">
-        <form class="contact-form">
-          <label for="name">Your Name:</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Your Email:</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
+    <div class="contact-image-float-container">
+        <img src="{{ url_for('static', filename='icon.png') }}">
     </div>
   </section>
 <script src="{{ url_for('static', filename='script.js') }}"></script>

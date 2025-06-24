@@ -126,4 +126,119 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    function initParticleBackground() {
+        const canvas = document.createElement("canvas");
+        canvas.id = "particle-background";
+        canvas.style.position = "fixed";
+        canvas.style.top = "0";
+        canvas.style.left = "0";
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        canvas.style.zIndex = "0";
+        canvas.style.opacity = "0.4";
+        document.body.prepend(canvas);
+
+        const ctx = canvas.getContext("2d");
+        let particles = [];
+        const accentColors = [
+            "106, 35, 229",
+            "110, 135, 232",
+            "209, 41, 200",
+            "43, 232, 198",
+            "99, 161, 240",
+            "48, 143, 243"
+        ];
+        const particleCount = 80;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            createParticles();
+        }
+
+        function createParticles() {
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 2 + 1,
+                    color: accentColors[Math.floor(Math.random() * accentColors.length)],
+                    speedX: (Math.random() - 0.5) * 1,
+                    speedY: (Math.random() - 0.5) * 1,
+                    life: Math.random() * 250 + 150,
+                    maxLife: Math.random() * 250 + 150,
+                });
+            }
+        }
+
+        function drawParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach((particle, index) => {
+                let opacity = 1;
+                if (particle.life < particle.maxLife * 0.2) {
+                    opacity = particle.life / (particle.maxLife * 0.2);
+                } else if (particle.life > particle.maxLife * 0.8) {
+                    opacity = (particle.maxLife - particle.life) / (particle.maxLife * 0.2);
+                }
+                
+                opacity = Math.max(0, Math.min(1, opacity));
+                
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${particle.color}, ${opacity})`;
+                ctx.fill();
+
+                particle.x += particle.speedX;
+                particle.y += particle.speedY;
+
+                particle.life--;
+
+                if (particle.life <= 0 || particle.x < -particle.radius || particle.x > canvas.width + particle.radius || particle.y < -particle.radius || particle.y > canvas.height + particle.radius) {
+                    particles[index] = {
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        radius: Math.random() * 2 + 1,
+                        color: accentColors[Math.floor(Math.random() * accentColors.length)],
+                        speedX: (Math.random() - 0.5) * 1,
+                        speedY: (Math.random() - 0.5) * 1,
+                        life: Math.random() * 250 + 150,
+                        maxLife: Math.random() * 250 + 150,
+                    };
+                }
+            });
+
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 90) {
+                        const lineOpacity = Math.min(
+                            (particles[i].life / particles[i].maxLife),
+                            (particles[j].life / particles[j].maxLife)
+                        ) * (0.2 - distance / 900);
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(${particles[i].color}, ${lineOpacity})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            requestAnimationFrame(drawParticles);
+        }
+
+        window.addEventListener("resize", resizeCanvas);
+        resizeCanvas();
+        createParticles();
+        drawParticles();
+    }
+
+    initParticleBackground();
 });
