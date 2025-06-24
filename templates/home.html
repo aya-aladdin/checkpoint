@@ -38,13 +38,42 @@
   </div>
 
   <section id="about-event-section" class="about-event-section">
-  <section class="about-left">
-    <h2>What is CheckPoint?</h2>
-    <p>CheckPoint is an annual hackathon designed to bring together students, developers, and tech enthusiasts from around the globe. It's a 48-hour event where participants collaborate to build innovative solutions, learn new technologies, and network with mentors and industry professionals. Our goal is to foster creativity, problem-solving, and a passion for technology in a fun and challenging environment.</p>
+    <div class="about-content-wrapper"> <!-- New wrapper for about-left and calendar -->
+        <section class="about-left">
+            <h2>What is CheckPoint?</h2>
+            <p>CheckPoint is an annual hackathon designed to bring together students, developers, and tech enthusiasts from around the globe. It's a 48-hour event where participants collaborate to build innovative solutions, learn new technologies, and network with mentors and industry professionals. Our goal is to foster creativity, problem-solving, and a passion for technology in a fun and challenging environment.</p>
 
-    <h3>When is CheckPoint?</h3>
-    <p>Mark your calendars! CheckPoint will take place from <strong>August 29th to August 31st, 2024</strong>. Get ready for an intense weekend of coding and creation!</p>
-  </section>
+            <h3>When is CheckPoint?</h3>
+            <p>Mark your calendars! CheckPoint will take place from <strong>August 29th to August 31st, 2024</strong>. Get ready for an intense weekend of coding and creation!</p>
+        </section>
+
+        <!-- New Calendar Section -->
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prevMonth" class="calendar-nav-button">&lt;</button>
+                <h3 id="currentMonthYear"></h3>
+                <button id="nextMonth" class="calendar-nav-button">&gt;</button>
+            </div>
+            <div class="calendar-weekdays">
+                <span>Sun</span>
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+            </div>
+            <div id="calendar-days" class="calendar-days">
+                <!-- Calendar days will be generated here by JavaScript -->
+            </div>
+             <div class="calendar-legend">
+                <span class="legend-item"><span class="legend-color highlight"></span> CheckPoint Dates</span>
+            </div>
+        </div>
+        <!-- End New Calendar Section -->
+
+    </div>
+
     <div class="faq-container">
         <details>
             <summary>Who can attend CheckPoint?</summary>
