@@ -113,18 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const faqDetails = document.querySelectorAll('.faq-container details');
 
     faqDetails.forEach(detail => {
-        const summary = detail.querySelector('summary');
-        const content = detail.querySelector('.faq-content');
 
-        summary.addEventListener('click', (event) => {
-            event.preventDefault();
-
-            if (detail.hasAttribute('open')) {
-                detail.removeAttribute('open');
-            } else {
-                detail.setAttribute('open', '');
-            }
-        });
     });
 
     function initParticleBackground() {
