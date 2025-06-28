@@ -1,3 +1,5 @@
+import { FileQuestion } from "lucide-react";
+
 export const sponsorBenefits = [
     {
         title: "Brand Visibility & Exposure",
@@ -32,7 +34,7 @@ export const faqData = [
     },
     {
         question: "Is there a cost to participate?",
-        answer: "No, CheckPoint is absolutely FREE for all participants! We believe in making technology accessible to everyone, so the full experience — including workshops, mentorship, and swag — comes at no cost, thanks to our amazing sponsors. The only optional fee is for food: if you'd like us to handle meals for you during the event, you can chip in your requested amount. Otherwise, feel free to bring your own or grab food your way or order food yourself!"
+        answer: "No, CheckPoint is absolutely FREE for all participants! We believe in making technology accessible to everyone, so the full experience — including workshops, mentorship, and swag — comes at no cost, thanks to our amazing sponsors."
     },
     {
         question: "Do I need a team?",
@@ -41,7 +43,15 @@ export const faqData = [
     {
         question: "What kind of projects can I build?",
         answer: "You can build anything you can imagine — as long as it's based on the theme: gamified productivity and street culture. Whether it's a web app, mobile app, AI model, or hardware hack, your project should creatively incorporate those two keywords in any way you interpret them - be creative and twist the words. Take the theme, run with it, and make something totally unique!"
-    }
+    },
+    {
+        question: "FOOD",
+        answer: "The only optional fee is for food: if you'd like us to handle meals for you during the event, you can chip in your requested amount. Otherwise, feel free to bring your own or grab food your way or order food yourself!"
+    },
+    {
+        question: "What is the judging criteria?",
+        answer: "There won't be peer voting this time - instead, our amazing volunteers (+ shahm) will be casting the votes!"
+    },
 ];
 
 export const phrases = [
@@ -51,4 +61,5 @@ export const phrases = [
     'Win Awesome Prizes',
     'Join us in Hack Street'
 ]
+
 

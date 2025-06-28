@@ -23,6 +23,9 @@
     --text-gray: #ccc;
 }
 
+html{
+    background-color: #11172d;
+}
 * {
     margin: 0;
     padding: 0;

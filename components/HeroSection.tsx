@@ -70,7 +70,7 @@ export function HeroSection() {
                             <Button
                                 asChild
                                 size="lg"
-                                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-6 text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-6 text-lg transition-all duration-300 hover:scale-105 shadow-lg rounded-full"
                             >
                                 <a
                                     href="https://docs.google.com/forms/d/e/1FAIpQLScXCsXDXKfIc_UlECBnENYnfi_4K6lXlcqV5Ql6v7g75YRmtw/viewform?embedded"
@@ -86,7 +86,7 @@ export function HeroSection() {
                                 asChild
                                 variant="outline"
                                 size="lg"
-                                className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold px-8 py-6 text-lg transition-all duration-300 hover:scale-105"
+                                className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold px-8 py-6 text-lg transition-all duration-300 hover:scale-105 rounded-full"
                             >
                                 <a
                                     href="https://discord.gg/4ZjKrG8Q"
@@ -99,12 +99,12 @@ export function HeroSection() {
                             </Button>
                         </div>
 
-                        <div className="pt-4">
+                        <div className="pt-2">
                             <Button
                                 asChild
                                 variant="secondary"
                                 size="lg"
-                                className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold px-6 py-4 transition-all duration-300 hover:scale-105"
+                                className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold px-8 py-6 transition-all duration-300 hover:scale-105 rounded-full -mt-2"
                             >
                                 <a
                                     href="https://flask-bank.vercel.app/login"
