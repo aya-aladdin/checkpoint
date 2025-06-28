@@ -49,7 +49,7 @@ export function HeroSection() {
                             alt="CheckPoint Event Illustration"
                             width={500}
                             height={400}
-                            className="w-full h-auto rounded-lg max-w-sm lg:max-w-lg" 
+                            className="w-full h-auto rounded-lg max-w-xs lg:max-w-lg"
                             priority
                         />
                     </div>
