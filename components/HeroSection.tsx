@@ -43,8 +43,18 @@ export function HeroSection() {
         <section id="home-section" className="min-h-screen flex items-center justify-center pt-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Content */}
-                    <div className="text-center lg:text-left space-y-8">
+                    <div className="flex justify-center lg:justify-end order-first lg:order-last">
+                        <Image
+                            src="/static/Group_1.png"
+                            alt="CheckPoint Event Illustration"
+                            width={500}
+                            height={400}
+                            className="w-full h-auto rounded-lg max-w-sm lg:max-w-lg" 
+                            priority
+                        />
+                    </div>
+
+                    <div className="text-center lg:text-left space-y-8 order-last lg:order-first">
                         <div className="space-y-4">
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                                 Join us at{' '}
@@ -115,25 +125,6 @@ export function HeroSection() {
                                     Make a wallet at HackStreet Bank
                                 </a>
                             </Button>
-                        </div>
-                    </div>
-
-                    {/* Hero Image */}
-                    <div className="flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-lg">
-                            <div
-                                className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-                            <div
-                                className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700 shadow-2xl">
-                                <Image
-                                    src="/static/Group_1.png"
-                                    alt="CheckPoint Event Illustration"
-                                    width={500}
-                                    height={400}
-                                    className="w-full h-auto rounded-lg"
-                                    priority
-                                />
-                            </div>
                         </div>
                     </div>
                 </div>

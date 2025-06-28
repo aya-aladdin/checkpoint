@@ -8,8 +8,17 @@ export function ContactSection() {
         <section id="contact-us-section" className="py-20">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Contact Info */}
-                    <div className="space-y-8">
+                    <div className="flex justify-center lg:justify-end order-first lg:order-last">
+                        <Image
+                            src="/static/icon.png"
+                            alt="HackStreet Logo"
+                            width={300}
+                            height={300}
+                            className="w-full h-auto rounded-lg max-w-xs lg:max-w-md" 
+                        />
+                    </div>
+
+                    <div className="space-y-8 order-last lg:order-first">
                         <div className="space-y-4">
                             <h2 className="text-3xl font-bold text-white">Get in Touch!</h2>
                             <p className="text-gray-300 leading-relaxed text-lg">
@@ -53,24 +62,6 @@ export function ContactSection() {
                             >
                                 Register Now
                             </a>
-                        </div>
-                    </div>
-
-                    {/* Contact Image */}
-                    <div className="flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-md">
-                            <div
-                                className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-                            <div
-                                className="relative bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 shadow-2xl">
-                                <Image
-                                    src="/static/icon.png"
-                                    alt="HackStreet Logo"
-                                    width={300}
-                                    height={300}
-                                    className="w-full h-auto rounded-lg"
-                                />
-                            </div>
                         </div>
                     </div>
                 </div>
