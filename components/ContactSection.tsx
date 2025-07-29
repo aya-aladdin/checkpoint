@@ -53,7 +53,7 @@ export function ContactSection() {
                         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-6 border border-purple-500/30">
                             <h3 className="text-xl font-semibold text-white mb-2">Ready to Join?</h3>
                             <p className="text-gray-300 mb-4">
-                                Don&#39;t wait - secure your spot at CheckPoint today and be part of something amazing!
+                                Don't wait - secure your spot at CheckPoint today and be part of something amazing!
                             </p>
                             <a
                                 href="#register-section"
