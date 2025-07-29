@@ -1,0 +1,68 @@
+import {Quest} from "@/lib/types";
+
+export const questData: Quest[] = [
+  {
+    id: 'first-commit',
+    title: 'The First Commit',
+    description: 'Push your first commit to the project repository and start your hackathon journey',
+    reward: 100,
+    type: 'Submission',
+    difficulty: 'Easy',
+  },
+  {
+    id: 'team-formation',
+    title: 'Squad Assembly',
+    description: 'Form a team of 2-4 hackers and register your crew for maximum collaboration',
+    reward: 150,
+    type: 'Social',
+    difficulty: 'Easy',
+  },
+  {
+    id: 'workshop-attendance',
+    title: 'Knowledge Seeker',
+    description: 'Attend any technical workshop to level up your skills and earn bonus points',
+    reward: 200,
+    type: 'Workshop',
+    difficulty: 'Easy',
+  },
+  {
+    id: 'project-demo',
+    title: 'The Grand Showcase',
+    description: 'Present your project to the judges and demonstrate your hackathon creation',
+    reward: 500,
+    type: 'Submission',
+    difficulty: 'Medium',
+  },
+  {
+    id: 'api-integration',
+    title: 'Data Stream Master',
+    description: 'Successfully integrate at least 2 external APIs into your project',
+    reward: 300,
+    type: 'Challenge',
+    difficulty: 'Medium',
+  },
+  {
+    id: 'community-helper',
+    title: 'Digital Samaritan',
+    description: 'Help 3 other teams with technical issues or provide valuable feedback',
+    reward: 250,
+    type: 'Social',
+    difficulty: 'Medium',
+  },
+  {
+    id: 'night-owl',
+    title: 'Midnight Warrior',
+    description: 'Submit a significant code contribution between 12 AM - 6 AM (for the dedicated)',
+    reward: 400,
+    type: 'Bonus',
+    difficulty: 'Hard',
+  },
+  {
+    id: 'innovation-prize',
+    title: 'The Innovator',
+    description: 'Create something completely unique that solves a real-world problem',
+    reward: 750,
+    type: 'Challenge',
+    difficulty: 'Hard',
+  },
+];

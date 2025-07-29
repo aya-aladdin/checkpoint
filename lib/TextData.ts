@@ -67,5 +67,3 @@ export const phrases = [
     'Win Awesome Prizes',
     'Join us in Hack Street'
 ]
-
-
