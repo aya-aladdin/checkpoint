@@ -49,7 +49,8 @@ export function RegisterSection() {
                     </div>
 
                     {/* Registration Form Embed */}
-                    <div className="rounded-xl p-1 border border-slate-700" style={{backgroundColor: '#fff'}}>                        <iframe
+                    <div className="rounded-xl p-1 border border-slate-700" style={{backgroundColor: '#fff'}}>
+                        <iframe
                             src="https://docs.google.com/forms/d/e/1FAIpQLScXCsXDXKfIc_UlECBnENYnfi_4K6lXlcqV5Ql6v7g75YRmtw/viewform?embedded=true"
                             className="w-full h-[600px] lg:h-[700px] rounded-lg"
                             style={{backgroundColor: 'to-pink-600/20'}}
