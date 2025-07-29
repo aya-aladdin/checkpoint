@@ -1,5 +1,3 @@
-import { FileQuestion } from "lucide-react";
-
 export const sponsorBenefits = [
     {
         title: "Brand Visibility & Exposure",

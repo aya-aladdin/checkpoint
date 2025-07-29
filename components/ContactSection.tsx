@@ -1,6 +1,5 @@
 'use client';
 
-import { Instagram } from 'lucide-react';
 import Image from 'next/image';
 
 export function ContactSection() {
@@ -37,8 +36,14 @@ export function ContactSection() {
                                     rel="noopener noreferrer"
                                     className="flex items-center space-x-3 text-pink-400 hover:text-pink-300 transition-colors duration-200 group"
                                 >
-                                    <div className="p-2 bg-pink-400/20 rounded-lg group-hover:bg-pink-400/30 transition-colors duration-200">
-                                        <Instagram className="h-6 w-6" />
+                                    <div>
+                                        <Image
+                                            src="https://cdn.iconscout.com/icon/free/png-256/free-instagram-1868978-1583142.png?f=webp&w=256"
+                                            alt="Instagram"
+                                            width={32}
+                                            height={32}
+                                            className="w-8 h-8"
+                                        />
                                     </div>
                                     <span className="font-medium">@hackstreet.ae</span>
                                 </a>
@@ -48,7 +53,7 @@ export function ContactSection() {
                         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-6 border border-purple-500/30">
                             <h3 className="text-xl font-semibold text-white mb-2">Ready to Join?</h3>
                             <p className="text-gray-300 mb-4">
-                                Don't wait — secure your spot at CheckPoint today and be part of something amazing!
+                                Don&#39;t wait - secure your spot at CheckPoint today and be part of something amazing!
                             </p>
                             <a
                                 href="#register-section"
