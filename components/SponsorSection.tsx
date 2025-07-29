@@ -3,7 +3,7 @@
 import {Button} from '@/components/ui/button';
 import {Download} from 'lucide-react';
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion";
-import {sponsorBenefits} from "@/components/TextData";
+import {sponsorBenefits} from "@/lib/TextData";
 
 
 export function SponsorSection() {

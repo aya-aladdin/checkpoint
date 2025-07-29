@@ -4,7 +4,7 @@ import {useEffect, useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {ExternalLink, MessageCircle, Wallet} from 'lucide-react';
 import Image from 'next/image';
-import {phrases} from "@/components/TextData";
+import {phrases} from "@/lib/TextData";
 
 export function HeroSection() {
     const [typewriterText, setTypewriterText] = useState('');
