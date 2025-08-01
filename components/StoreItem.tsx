@@ -23,12 +23,12 @@ const StoreItem: React.FC<StoreItemProps> = ({ item }) => {
       case 'Merch': return '👕';
       case 'Collectible': return '🏆';
       case 'Experience': return '✨';
-      default: return '📦';
+      default: return '�';
     }
   };
 
   return (
-    <div className="bg-dark-bg border-2 border-gray-700/50 rounded-xl overflow-hidden transition-all duration-300 hover:border-accent-blue/50 hover:glow-blue transform hover:scale-105">
+    <div className="bg-dark-bg border-2 border-gray-700/50 rounded-xl overflow-hidden transition-all duration-300">
       <div className="relative">
         <Image
           src={item.img}
