@@ -99,7 +99,7 @@ export function HeroSection() {
                                 className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold px-8 py-6 text-lg transition-all duration-300 hover:scale-105 rounded-full"
                             >
                                 <a
-                                    href="https://discord.gg/4ZjKrG8Q"
+                                    href="https://discord.gg/b7QDYbs4wv"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
