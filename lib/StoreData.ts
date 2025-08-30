@@ -14,7 +14,7 @@ export const storeItems: StoreItemType[] = [
     {
         id: 'dino',
         name: 'TRex Lamp',
-        description: 'Cool ass TRex lamp.',
+        description: 'Cool ass TRex lamp.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀',
         img: 'https://m.media-amazon.com/images/I/719MhxuXSBL._AC_SX679_.jpg',
         stock: 1,
         startingBid: 10,
@@ -54,7 +54,7 @@ export const storeItems: StoreItemType[] = [
     {
         id: 'cute-dino',
         name: 'Dino lamp',
-        description: 'Lamp shaped as a dino',
+        description: 'Lamp shaped as a dino⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀',
         img: 'https://m.media-amazon.com/images/I/41aDuGHXTOL._AC_SX569_.jpg',
         stock: 1,
         startingBid: 20,
@@ -73,7 +73,7 @@ export const storeItems: StoreItemType[] = [
     }, {
         id: 'mouse',
         name: 'Gaming Mouse',
-        description: 'Cool rgb black wired gaming mouse.',
+        description: 'Cool rgb black wired gaming mouse.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀',
         img: 'https://m.media-amazon.com/images/I/71auXf8QKgL._AC_SX450_.jpg',
         stock: 3,
         startingBid: 15,
