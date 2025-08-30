@@ -32,7 +32,7 @@ export const faqData = [
     },
     {
         question: "Is there a cost to participate?",
-        answer: "No, CheckPoint is absolutely FREE for all participants! We believe in making technology accessible to everyone, so the full experience — including workshops, mentorship, and swag — comes at no cost, thanks to our amazing sponsors. The only optional fee is for food: if you'd like us to handle meals for you during the event, you can chip in your requested amount. Otherwise, feel free to bring your own or grab food your way or order food yourself!"
+        answer: "The entry fee for CheckPoint is just $6! 🎉 This small amount covers your full experience, including workshops, mentorship, and swag, thanks to our amazing sponsors. Food is optional: you can chip in for meals, bring your own, or order your way."
     },
     {
         question: "Do I need a team?",

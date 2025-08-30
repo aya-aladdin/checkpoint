@@ -74,19 +74,19 @@ export const questData: Quest[] = [
     difficulty: 'Medium',
   },
   {
-    id: 'public-execution',
-    title: 'Public Execution',
-    description: 'Perform a task or challenge in front of an audience',
-    reward: 1,
-    type: 'Challenge',
-    difficulty: 'Hard',
-  },
-  {
     id: 'wikispeedia-winner',
     title: 'Wikispeedia Champion',
     description: 'Be the first to win a round of Wikispeedia',
     reward: 1,
     type: 'Social',
     difficulty: 'Easy',
+  },
+  {
+    id: 'public-execution',
+    title: 'Public Execution',
+    description: 'Yep, you heard that right ;)',
+    reward: 0,
+    type: 'Challenge',
+    difficulty: 'Hard',
   },
 ];
