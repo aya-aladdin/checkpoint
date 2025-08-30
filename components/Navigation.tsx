@@ -1,14 +1,12 @@
 'use client';
 
 import {useEffect, useState} from 'react';
-import {Menu, X} from 'lucide-react';
+import {Menu, ShoppingBag, Trophy, X, Home} from 'lucide-react';
 
 const navItems = [
-    {href: '#home-section', label: 'Home'},
-    {href: '#register-section', label: 'Register'},
-    {href: '#about-event-section', label: 'About'},
-    {href: '#sponsor-us-section', label: 'Sponsor Us'},
-    {href: '#contact-us-section', label: 'Contact'},
+    { href: '/', label: 'Home', icon: Home },
+    { href: '/quests', label: 'Quests', icon: Trophy },
+    { href: '/store', label: 'Store', icon: ShoppingBag },
 ];
 
 export function Navigation() {
@@ -26,10 +24,7 @@ export function Navigation() {
 
     const handleNavClick = (href: string) => {
         setIsMobileMenuOpen(false);
-        const element = document.querySelector(href);
-        if (element) {
-            element.scrollIntoView({behavior: 'smooth'});
-        }
+        window.location.href = href;
     };
 
     return (

@@ -1,7 +1,7 @@
 'use client';
 
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion";
-import {faqData} from "@/components/TextData";
+import {faqData} from "@/lib/TextData";
 
 
 export function FAQSection() {
