@@ -68,7 +68,7 @@ export const storeItems: StoreItemType[] = [
         img: 'https://m.media-amazon.com/images/I/71auXf8QKgL._AC_SX450_.jpg',
         stock: 3,
         startingBid: 25,
-        category: 'Merch',
+        category: 'Tech',
         rarity: 'Rare',
     }, {
         id: 'mouse',
@@ -77,7 +77,7 @@ export const storeItems: StoreItemType[] = [
         img: 'https://m.media-amazon.com/images/I/71auXf8QKgL._AC_SX450_.jpg',
         stock: 3,
         startingBid: 15,
-        category: 'Merch',
+        category: 'Tech',
         rarity: 'Rare',
     },
 ];
