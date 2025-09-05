@@ -59,7 +59,7 @@ const StoreItem: React.FC<StoreItemProps> = ({ item }) => {
           </div>
         </div>
         
-        <p className="text-gray-custom text-sm mb-4 leading-relaxed line-clamp-2">
+        <p className="text-gray-custom text-sm mb-4 leading-relaxed">
           {item.description}
         </p>
         
