@@ -66,9 +66,9 @@ export const questData: Quest[] = [
     difficulty: 'Easy',
   },
   {
-    id: 'kahoot',
-    title: 'Kahoot!',
-    description: 'Win in the Kahoot! game',
+    id: 'blooket',
+    title: 'Blooket!',
+    description: 'Win in the Blooket game!',
     reward: 10,
     type: 'Social',
     difficulty: 'Easy',
