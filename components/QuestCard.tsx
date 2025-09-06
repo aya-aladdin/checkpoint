@@ -60,7 +60,7 @@ const QuestCard: React.FC<QuestCardProps> = ({ quest }) => {
         <div className="flex items-center space-x-2">
           <Trophy className="w-5 h-5 text-accent-green" />
           <span className="text-neon-green font-bold text-lg">
-            {quest.reward} CP
+            {quest.reward} CHP
           </span>
         </div>
 
