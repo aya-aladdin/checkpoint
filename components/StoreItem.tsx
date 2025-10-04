@@ -55,7 +55,7 @@ const StoreItem: React.FC<StoreItemProps> = ({ item }) => {
           </h3>
           <div className="flex items-center space-x-1 text-accent-green">
             <Package className="w-4 h-4" />
-            <span className="text-xs font-medium whitespace-nowrap">{item.stock} in stock</span>
+            <span className="text-xs font-medium whitespace-nowrap">{item.stock}</span>
           </div>
         </div>
         

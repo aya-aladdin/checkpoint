@@ -3,7 +3,7 @@ export interface StoreItemType {
     name: string;
     description: string;
     img: string;
-    stock: number;
+    stock: number | string;
     startingBid: number;
     category: 'Merch' | 'Tech' | 'Collectible' | 'Experience';
     rarity: 'Common' | 'Rare' | 'Epic' | 'Legendary';

@@ -97,12 +97,4 @@ export const questData: Quest[] = [
     type: 'Social',
     difficulty: 'Easy',
   },
-  {
-    id: 'public-execution',
-    title: 'Public Execution',
-    description: 'Yep, you heard that right ;) (feat. layal)',
-    reward: 0,
-    type: 'Challenge',
-    difficulty: 'Hard',
-  },
 ];
